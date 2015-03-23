@@ -18,8 +18,8 @@ module LocaleSetter
         {:params => params,
          :user   => locale_user,
          :domain => request.host,
-         :env    => request.env},
-         :cookies => cookies
+         :env    => request.env,
+         :cookies => cookies}
       )
     end
 
