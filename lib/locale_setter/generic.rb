@@ -24,8 +24,8 @@ module LocaleSetter
     end
 
     def self.from_cookies(cookies, available)
-      if cookies && cookies[URL_PARAM]
-        LocaleSetter::Param.for(cookies[URL_PARAM], available)
+      if cookies && cookies[LocaleSetter.config.cookie_param]
+        LocaleSetter::Param.for(cookies[LocaleSetter.config.cookie_param], available)
       end
     end
 

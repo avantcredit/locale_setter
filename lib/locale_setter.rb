@@ -10,9 +10,10 @@ require "locale_setter/param"
 require "locale_setter/generic"
 
 module LocaleSetter
-  HTTP_HEADER = 'HTTP_ACCEPT_LANGUAGE'
-  URL_PARAM   = :locale
-  USER_METHOD = :locale
+  HTTP_HEADER         = 'HTTP_ACCEPT_LANGUAGE'
+  URL_PARAM           = :locale
+  COOKIE_PARAM        = :locale
+  USER_METHOD         = :locale
   CURRENT_USER_METHOD = :current_user
 
   class << self
@@ -30,9 +31,10 @@ module LocaleSetter
 
     def default_params
       {
-        :url_param => URL_PARAM,
-        :user_locale_method => USER_METHOD,
-        :localized_domains => {},
+        :url_param           => URL_PARAM,
+        :cookie_param        => COOKIE_PARAM,
+        :user_locale_method  => USER_METHOD,
+        :localized_domains   => {},
         :current_user_method => CURRENT_USER_METHOD
       }
     end
